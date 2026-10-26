@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASTRAL — AI-Powered Business Intelligence</title>
+  <meta name="description" content="Transform your business data into clear insights, intelligent predictions, and better decisions.">
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="stylesheet" href="/css/style.css?v=2026">
+  <link rel="stylesheet" href="/css/responsive.css?v=2026">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="brand-logo">
+      <img src="/assets/logo.png" height="48" alt="ASTRAL Logo" class="brand-icon-img" style="height: 48px; max-height: 52px; width: auto; object-fit: contain;">
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+      <a href="/login" class="btn btn-login-nav" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(0, 229, 255, 0.18) 100%); color: #FFFFFF !important; border: 1.5px solid rgba(16, 185, 129, 0.5); border-radius: 10px; padding: 10px 24px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);">
+        <span style="color: #10B981; font-weight: 800; font-size: 1.1rem; line-height: 1;">&rarr;</span>
+        <span style="color: #FFFFFF !important; font-weight: 600; letter-spacing: 0.02em;">Login</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="badge badge-green" style="margin-bottom: 16px; font-weight: 600; padding: 6px 14px; font-size: 0.825rem;">Next-Gen Enterprise BI</span>
+      <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px; font-weight: 800;">AI-Powered <br><span class="text-green-accent">Business Intelligence</span></h1>
+      <p style="font-size: 1.15rem; line-height: 1.6; margin-bottom: 36px; color: #94A3B8;">Transform your business data into clear insights, intelligent predictions, and better decisions.</p>
+      
+      <div class="hero-buttons">
+        <a href="#why-astral" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem; border-radius: 12px;">Explore ASTRAL</a>
+      </div>
+    </div>
+    
+    <!-- Dashboard Live Preview Card -->
+    <div class="hero-preview-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/assets/logo.png" height="28" alt="ASTRAL Logo" style="object-fit: contain;">
+          <span style="font-weight: 700; font-size: 0.95rem; color: #FFFFFF;">Executive Telemetry</span>
+        </div>
+        <span class="badge badge-green" style="font-size: 0.75rem; letter-spacing: 0.05em;">LIVE PREVIEW</span>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px;">
+        <div style="background: rgba(255, 255, 255, 0.04); padding: 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="font-size: 0.75rem; color: #94A3B8; font-weight: 600; letter-spacing: 0.05em;">TOTAL REVENUE</div>
+          <div style="font-size: 1.5rem; font-weight: 800; color: #00E5FF; margin-top: 4px;">₹12.4 Cr</div>
+        </div>
+        
+        <div style="background: rgba(255, 255, 255, 0.04); padding: 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="font-size: 0.75rem; color: #94A3B8; font-weight: 600; letter-spacing: 0.05em;">HEALTH SCORE</div>
+          <div style="font-size: 1.5rem; font-weight: 800; color: #10B981; margin-top: 4px;">92%</div>
+        </div>
+      </div>
+      
+      <div style="height: 200px;">
+        <canvas id="heroPreviewChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" style="padding: 90px 40px; background: rgba(17, 24, 39, 0.4);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 12px; font-size: 2.25rem;">Complete Business Intelligence Platform</h2>
+      <p style="margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; color: #94A3B8;">
+        Designed specifically for managers and executives to understand data quickly and act decisively.
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; text-align: left;">
+        <div class="card">
+          <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.15); color: #34D399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">01</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: #FFFFFF;">Business Overview</h3>
+          <p style="color: #94A3B8;">Get a quick view of your business health, revenue, orders, customers and daily performance.</p>
+        </div>
+        
+        <div class="card">
+          <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.15); color: #34D399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">02</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: #FFFFFF;">Business Analytics</h3>
+          <p style="color: #94A3B8;">Analyze sales, revenue, customers, products and important business trends across categories.</p>
+        </div>
+        
+        <div class="card">
+          <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.15); color: #34D399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">03</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: #FFFFFF;">AI Predictions</h3>
+          <p style="color: #94A3B8;">Forecast future revenue, sales and identify accounts with elevated customer churn risk.</p>
+        </div>
+
+        <div class="card">
+          <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.15); color: #34D399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">04</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: #FFFFFF;">AI Assistant</h3>
+          <p style="color: #94A3B8;">Ask natural questions about your business data and receive clear, data-backed answers instantly.</p>
+        </div>
+        
+        <div class="card">
+          <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.15); color: #34D399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">05</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: #FFFFFF;">Digital Twin</h3>
+          <p style="color: #94A3B8;">Explore what-if scenarios and understand how business changes affect future profitability.</p>
+        </div>
+        
+        <div class="card">
+          <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.15); color: #34D399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">06</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: #FFFFFF;">Smart Reports</h3>
+          <p style="color: #94A3B8;">Generate clear daily, weekly and monthly executive business reports automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" style="padding: 90px 40px; background: transparent;">
+    <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 12px; font-size: 2.25rem;">How ASTRAL Works</h2>
+      <p style="margin-bottom: 48px; color: #94A3B8;">Simple intelligence pipeline transforming raw data into manager decisions.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; align-items: center;">
+        <div class="card" style="padding: 16px; font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">
+          Business Data
+        </div>
+        <div style="color: #10B981; font-weight: 800; font-size: 1.2rem;">→</div>
+        <div class="card" style="padding: 16px; font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">
+          Data Processing
+        </div>
+        <div style="color: #10B981; font-weight: 800; font-size: 1.2rem;">→</div>
+        <div class="card" style="padding: 16px; font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">
+          Business Analytics
+        </div>
+        <div style="color: #10B981; font-weight: 800; font-size: 1.2rem;">→</div>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; align-items: center; margin-top: 16px;">
+        <div class="card" style="padding: 16px; font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">
+          Machine Learning
+        </div>
+        <div style="color: #10B981; font-weight: 800; font-size: 1.2rem;">→</div>
+        <div class="card" style="padding: 16px; font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">
+          AI Insights
+        </div>
+        <div style="color: #10B981; font-weight: 800; font-size: 1.2rem;">→</div>
+        <div class="card" style="padding: 16px; font-size: 0.85rem; font-weight: 700; color: #34D399; border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.15);">
+          Manager Decisions
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" style="padding: 90px 40px; background: rgba(17, 24, 39, 0.4);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 2.25rem;">Answering Core Executive Questions</h2>
+        <p style="color: #94A3B8;">ASTRAL focuses on the four questions every manager needs answered every morning.</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div class="card">
+          <span class="badge badge-green" style="margin-bottom: 12px;">Overview</span>
+          <h3 style="color: #FFFFFF;">"How is my business performing?"</h3>
+          <p style="margin-top: 8px; color: #94A3B8;">Provides immediate clarity through the 92/100 Business Health score, overall revenue, profit margins, and orders.</p>
+        </div>
+        
+        <div class="card">
+          <span class="badge badge-blue" style="margin-bottom: 12px;">Analytics</span>
+          <h3 style="color: #FFFFFF;">"Why is it performing this way?"</h3>
+          <p style="margin-top: 8px; color: #94A3B8;">Breakdowns across product lines, category contributions, and regional growth metrics pinpoint precise drivers.</p>
+        </div>
+        
+        <div class="card">
+          <span class="badge badge-amber" style="margin-bottom: 12px;">Predictions</span>
+          <h3 style="color: #FFFFFF;">"What is likely to happen next?"</h3>
+          <p style="margin-top: 8px; color: #94A3B8;">Random Forest machine learning models forecast revenue curves and highlight customer churn risks early.</p>
+        </div>
+        
+        <div class="card">
+          <span class="badge badge-green" style="margin-bottom: 12px;">AI Assistant & Insights</span>
+          <h3 style="color: #FFFFFF;">"What should I pay attention to?"</h3>
+          <p style="margin-top: 8px; color: #94A3B8;">Automated attention badges flag sudden category dips and high-priority accounts needing manager action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding: 90px 40px; background: transparent;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 16px; font-size: 2.25rem;">About ASTRAL</h2>
+      <p style="font-size: 1.1rem; line-height: 1.7; color: #CBD5E1;">
+        ASTRAL is designed to simplify business intelligence by bringing business data, analytics, machine learning and AI-powered insights into one easy-to-use platform. Built for executive decision-makers who value speed, clarity, and precision.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why ASTRAL? Section -->
+  <section id="why-astral" style="padding: 90px 40px; background: rgba(17, 24, 39, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 850px; margin: 0 auto 56px auto;">
+        <span class="badge badge-green" style="margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em;">Why Choose Us</span>
+        <h2 style="font-size: 2.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 12px;">Why ASTRAL?</h2>
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #10B981; margin-bottom: 18px;">Turn Business Data Into Business Intelligence</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: #94A3B8;">
+          ASTRAL goes beyond traditional dashboards by connecting business analytics, machine learning, and AI-powered insights in a unified intelligence layer. It helps decision-makers understand performance, uncover hidden patterns, anticipate what comes next, and focus on the actions that matter most.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+        <div class="card" style="padding: 28px;">
+          <div style="font-size: 1.4rem; font-weight: 800; color: #10B981; margin-bottom: 12px; font-family: monospace;">01</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">From Data to Decisions</h3>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: #94A3B8;">
+            Raw data only becomes valuable when it leads to better decisions. ASTRAL transforms complex business data into clear insights, helping managers move from understanding performance to taking informed action.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 28px;">
+          <div style="font-size: 1.4rem; font-weight: 800; color: #10B981; margin-bottom: 12px; font-family: monospace;">02</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Intelligence, Not Just Information</h3>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: #94A3B8;">
+            Traditional dashboards tell you what happened. ASTRAL goes further by helping explain why it happened, what may happen next, and what deserves attention—turning information into actionable intelligence.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 28px;">
+          <div style="font-size: 1.4rem; font-weight: 800; color: #10B981; margin-bottom: 12px; font-family: monospace;">03</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Predict Before You React</h3>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: #94A3B8;">
+            Use machine learning to identify trends, forecast future outcomes, and detect potential risks before they become larger business problems. ASTRAL helps decision-makers shift from reactive decisions to proactive planning.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 28px;">
+          <div style="font-size: 1.4rem; font-weight: 800; color: #10B981; margin-bottom: 12px; font-family: monospace;">04</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">AI That Understands Your Business</h3>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: #94A3B8;">
+            Interact with business data using natural language instead of complex queries or endless dashboard exploration. ASTRAL's AI Assistant delivers clear, data-backed answers designed for practical business understanding.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 28px;">
+          <div style="font-size: 1.4rem; font-weight: 800; color: #10B981; margin-bottom: 12px; font-family: monospace;">05</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Focus on What Matters</h3>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: #94A3B8;">
+            Not every metric deserves equal attention. ASTRAL identifies significant changes, emerging risks, and important opportunities so decision-makers can focus their time on the areas that require action.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 28px;">
+          <div style="font-size: 1.4rem; font-weight: 800; color: #10B981; margin-bottom: 12px; font-family: monospace;">06</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Explore Decisions Before Making Them</h3>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: #94A3B8;">
+            Business decisions often involve uncertainty. ASTRAL's Digital Twin enables what-if analysis, allowing users to explore potential scenarios and understand how changes could influence future business performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="padding: 90px 40px; background: transparent;">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+      <div>
+        <h2 style="margin-bottom: 12px; color: #FFFFFF;">Get in Touch</h2>
+        <p style="margin-bottom: 28px; color: #94A3B8;">Have questions about deploying ASTRAL for your executive team? Contact our business solutions consultants.</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 16px; font-size: 0.95rem; color: #CBD5E1;">
+          <div><strong style="color: #FFFFFF;">Email:</strong> ritikeshbhardwaj7070@gmail.com</div>
+          <div><strong style="color: #FFFFFF;">Phone:</strong> +91 7549661160</div>
+          <div><strong style="color: #FFFFFF;">Location:</strong> Bhagalpur, Bihar</div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+          <div style="margin-bottom: 14px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #E2E8F0;">Name</label>
+            <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin-top: 4px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white;" required>
+          </div>
+          <div style="margin-bottom: 14px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #E2E8F0;">Email</label>
+            <input type="email" placeholder="manager@company.com" style="width: 100%; padding: 10px; margin-top: 4px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white;" required>
+          </div>
+          <div style="margin-bottom: 14px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #E2E8F0;">Company</label>
+            <input type="text" placeholder="Company Name" style="width: 100%; padding: 10px; margin-top: 4px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white;">
+          </div>
+          <div style="margin-bottom: 18px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #E2E8F0;">Message</label>
+            <textarea rows="3" placeholder="How can ASTRAL help your business?" style="width: 100%; padding: 10px; margin-top: 4px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #0D111A; color: #94A3B8; padding: 60px 40px 30px 40px; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+      <div>
+        <div class="brand-logo" style="color: white; margin-bottom: 14px;">
+          <img src="/assets/logo.png" height="60" alt="ASTRAL Logo" style="height: 60px; object-fit: contain;">
+        </div>
+        <p style="color: #94A3B8; max-width: 360px;">AI-powered Strategic Transformation & Recommendation Assistant Layer.</p>
+      </div>
+      
+      <div>
+        <h4 style="color: white; margin-bottom: 16px;">Quick Links</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem;">
+          <li><a href="#features" style="color: #94A3B8;">Features</a></li>
+          <li><a href="#solutions" style="color: #94A3B8;">Solutions</a></li>
+          <li><a href="#how-it-works" style="color: #94A3B8;">How It Works</a></li>
+          <li><a href="#about" style="color: #94A3B8;">About</a></li>
+          <li><a href="#contact" style="color: #94A3B8;">Contact</a></li>
+          <li><a href="/login" style="color: #94A3B8;">Login</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 style="color: white; margin-bottom: 16px;">Contact</h4>
+        <p style="font-size: 0.9rem; color: #94A3B8;">
+          ASTRAL Enterprise Solutions<br>
+          ritikeshbhardwaj7070@gmail.com<br>
+          +91 7549661160
+        </p>
+      </div>
+    </div>
+    
+    <div style="max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 0.85rem; color: #64748B;">
+      © 2026 Ritikesh Bhardwaj. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const ctx = document.getElementById("heroPreviewChart").getContext("2d");
+      const gradient = ctx.createLinearGradient(0, 0, 0, 180);
+      gradient.addColorStop(0, 'rgba(16, 185, 129, 0.35)');
+      gradient.addColorStop(1, 'rgba(16, 185, 129, 0.0)');
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+          datasets: [{
+            data: [8.5, 9.2, 10.1, 11.0, 11.8, 12.4],
+            borderColor: "#10B981",
+            borderWidth: 3,
+            backgroundColor: gradient,
+            fill: true,
+            tension: 0.35,
+            pointBackgroundColor: "#10B981",
+            pointBorderColor: "#FFFFFF",
+            pointBorderWidth: 2,
+            pointRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: {
+              grid: { color: "rgba(255, 255, 255, 0.05)" },
+              ticks: { color: "#94A3B8" }
+            },
+            y: {
+              grid: { color: "rgba(255, 255, 255, 0.05)" },
+              ticks: { color: "#94A3B8" }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

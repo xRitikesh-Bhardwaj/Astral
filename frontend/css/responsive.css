@@ -1,0 +1,125 @@
+/* ==========================================================================
+   ASTRAL RESPONSIVE BREAKPOINTS - Tablet & Mobile Media Queries
+   ========================================================================== */
+
+/* Tablet (Under 1024px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 24px;
+  }
+  
+  .kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-2col, .grid-2col-equal {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-wrapper {
+    margin-left: 0;
+  }
+  
+  .portal-nav-links .nav-item a {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile (Under 992px) */
+@media (max-width: 992px) {
+  .portal-navbar {
+    padding: 12px 20px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .mobile-toggle-btn {
+    display: block;
+  }
+
+  .portal-nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 0 6px 0;
+    gap: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+  }
+
+  .portal-nav-links.mobile-open {
+    display: flex;
+  }
+
+  .portal-nav-links .nav-item a {
+    padding: 10px 14px;
+    font-size: 0.925rem;
+  }
+
+  .portal-nav-right .date-badge {
+    display: none;
+  }
+}
+
+/* Mobile (Under 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+  
+  .nav-links {
+    display: none; /* Hide default nav, toggle collapsible menu */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+  
+  .main-wrapper {
+    margin-left: 0;
+  }
+  
+  .topbar {
+    padding: 16px 20px;
+  }
+  
+  .content-area {
+    padding: 20px 16px;
+  }
+  
+  .kpi-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .grid-3col {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-badge {
+    display: none;
+  }
+  
+  .portal-nav-right .user-info {
+    display: none;
+  }
+}
+
+/* Small Mobile (Under 480px) */
+@media (max-width: 480px) {
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
